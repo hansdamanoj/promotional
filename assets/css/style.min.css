@@ -6,6 +6,7 @@ body {
     font-size: 14px;
     line-height: 1.75;
     color: #565656;
+    overflow-x: hidden;  
 }
 @media screen and (max-width: 1199px) {
     .container {
