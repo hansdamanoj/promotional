@@ -5427,9 +5427,13 @@ span.required {
 }
 .rounded-button a{
     border: 1px solid #3c3939;
-    padding: 5px 15px;
+    padding: 5px 20px;
     border-radius: 20px;
     margin-top: 20px;
+}
+.rounded-button a:hover{
+    border: 1px solid #f1f1f1;
+    background: #ceb5ee;
 }
 .product-desc center{
     min-height: 160px;
