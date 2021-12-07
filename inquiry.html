@@ -186,7 +186,14 @@
                 <div class="col-6">
                   <div class="form-group">
                     <label>Quantity <span class="required">*</span></label>
-                    <input type="number" name="quantity" id="quantity" min="10000"  />
+                    <!-- <input type="number" name="quantity" id="quantity" min="10000"  /> -->
+                    <select name="quantity" id="quantity" class="form-select form-select-sm">
+                      <option value="0" disabled selected>Select Quantity</option>
+                      <option value="10000">10000</option>
+                      <option value="20000">20000</option>
+                      <option value="50000">50000</option>
+                      <option value="100000">100000</option>
+                    </select>
                   </div>
                 </div>
                 <div class="col-6">
@@ -696,17 +703,17 @@
           return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
 
-      $('#quantity').on("keydown", function(e){
+      $('#quantity').on("change", function(e){
       var prodId = getParameterByName('prod');
       var quantity = $('#quantity').val();
       console.log("quantity >>>>", quantity);
-      if(prodId == 1){
+      // if(prodId == 1){
         if(quantity <= 10000) $('#price').val("0.90c");
         if(quantity > 10000 && quantity <= 20000) $('#price').val("0.80c");
         if(quantity > 20000 && quantity <= 50000) $('#price').val("0.60c");
         if(quantity > 50000 && quantity <= 100000) $('#price').val("0.60c");
         if(quantity > 100000) $('#price').val("negotiable");
-      }
+      // }
 
       });
     </script>
